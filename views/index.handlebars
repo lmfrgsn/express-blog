@@ -1,0 +1,16 @@
+<h1 class="text-3xl font-semibold text-indigo-500 mt-8 mb-8">{{title}}</h1>
+
+{{#if posts.length}}
+<ul class="">
+    {{#each posts}}
+    <li class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-4"><a
+            class="font-bold text-xl block" href="/post/{{this.url}}">{{this.title}}</a> <time
+            class="block font-hairline">{{this.date}}</time></li>
+    {{/each}}
+</ul>
+{{else}}
+<p class="mb-4">Nothing here, dawg.</p>
+{{/if}}
+
+<a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="/create">Add
+    Post</a>
